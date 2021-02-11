@@ -12,12 +12,13 @@
          vol=volume(h,b,d);
         return vol;
      }
-     float displaydata(){
-         float vol;
-         vol=getdata();
+     float displaydata(float vol){
         printf("Volume of the tromboloid is :%2f",vol);
      }
      int main()
      {
-       displaydata();
+         float vol;
+         vol = getdata();
+       displaydata(vol);
      }
+

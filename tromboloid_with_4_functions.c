@@ -24,10 +24,11 @@ int inp3()
     return d;
 }
 
-int vol(int b,int h,int d)
+float vol(int b,int h,int d)
 {
-    int vt;
+    float vt;
     vt=(0.3333)*((b*h*d)+(d/b));
+    Return vt;
     
 }
 

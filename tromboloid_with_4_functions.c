@@ -1,50 +1,35 @@
 //WAP to find the volume of a tromboloid using 4 functions.
 #include <stdio.h>
-int inp1()
+float input();
+float find_volume(float h,float d,float b);
+void output(float h,float d,float b,float v);
+int main()
 {
-    int b;
-    printf("enter bredth \n");
-    scanf("%d",&b);
-    return b;
+    float x,y,z,volume;
+    x=input();
+    y=input();
+    z=input();
+    volume=find_volume(x,y,z);
+    output(x,y,z,volume);
+    return 0;
 }
 
-int inp2()
+float input()
 {
     int h;
-    printf("Enter height \n");
+    printf("Enter the number: ");
     scanf("%d",&h);
     return h;
 }
 
-int inp3()
+float find_volume(float h, float d, float b)
 {
-    int d;
-    printf("Enter depth \n");
-    scanf("%d",&d);
-    return d;
+    float v;
+    v=0.333333*((h*d*b)+(d/b));
+    return v;
 }
 
-float vol(int b,int h,int d)
+void output(float h, float d, float b,float v)
 {
-    float vt;
-    vt=(0.3333)*((b*h*d)+(d/b));
-    Return vt;
-    
+    printf("\nvolume of trombloid is: %f\n",v);
 }
-
-int out(int b,int h,int d, int v)
-{
-    printf("Volume of tromboloid is %d \n",v);
-}
-
-int main()
-{
-    int w,x,y,z;
-    w=inp1();
-    x=inp2();
-    y=inp3();
-    z=vol(w,x,y);
-    out(w,x,y,z);
-}
-
-
